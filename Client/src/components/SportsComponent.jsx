@@ -10,7 +10,7 @@ export default function SportsComponent() {
 
         (
             async () => {
-                const res = await axios.get("http://localhost:5111/post/Sports");
+                const res = await axios.get("https://newsportal-1.onrender.com/post/Sports");
                 setPost(res.data);
             }
         )()

@@ -11,7 +11,7 @@ export default function Health() {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:5111/post/Health");
+      const res = await axios.get("https://newsportal-1.onrender.com/post/Health");
 
       setPosts(res.data);
     })();

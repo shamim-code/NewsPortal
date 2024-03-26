@@ -10,7 +10,7 @@ export default function Desh() {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:5111/post/Desh");
+      const res = await axios.get("https://newsportal-1.onrender.com/post/Desh");
       console.log(res.data);
       setPosts(res.data);
     })();
@@ -34,7 +34,7 @@ export default function Desh() {
                 className="h-60 w-60 sm:w-[350px]  md:h-72 md:w-[400px] lg:w-[750px] lg:h-[380px] relative rounded-md shadow-md shadow-black"
               >
                 <div className=" absolute backdrop-blur-sm bg-white/30 top-36 md:top-48 lg:top-72 h-24 hover:backdrop-blur-md w-full">
-                  <p className=" font-semibold cursor-pointer">
+                  <p onClick={()=> {navigation(`/details/${posts[0].title}`)}} className=" font-semibold cursor-pointer">
                     {posts[0].title.slice(0, 80)}
                   </p>
                   <p className=" truncate">{posts[0].postDescription}</p>
@@ -56,7 +56,7 @@ export default function Desh() {
                   className="h-44 w-60 sm:w-[300px] md:w-80 lg:w-[500px] relative rounded-md shadow-md shadow-black"
                 >
                   <div className=" absolute backdrop-blur-sm bg-white/30 top-24 h-20 w-full">
-                    <p className=" font-semibold hover:backdrop-blur-md h-full cursor-pointer">
+                    <p onClick={()=> {navigation(`/details/${posts[1].title}`)}} className=" font-semibold hover:backdrop-blur-md h-full cursor-pointer">
                       {posts[1].title.slice(0, 80)}
                     </p>
                   </div>
@@ -76,7 +76,7 @@ export default function Desh() {
                   className="h-44 w-60 sm:w-[300px] md:w-80 lg:w-[500px] relative rounded-md shadow-md shadow-black"
                 >
                   <div className=" absolute backdrop-blur-sm bg-white/30 top-24 h-20 w-full">
-                    <p className=" font-semibold hover:backdrop-blur-md h-full cursor-pointer">
+                    <p onClick={()=> {navigation(`/details/${posts[2].title}`)}} className=" font-semibold hover:backdrop-blur-md h-full cursor-pointer">
                       {posts[2].title.slice(0, 80)}
                     </p>
                   </div>

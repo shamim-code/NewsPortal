@@ -5,7 +5,7 @@ import "./style.css";
 
 export default function Navbar() {
 
-    const baseUrl = "http://localhost:5111/category/getAll";
+    const baseUrl = "https://newsportal-1.onrender.com/category/getAll";
     const [category, setCategory] = useState([]);
 
     useEffect(() => {

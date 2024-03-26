@@ -11,7 +11,7 @@ export default function InternationalComponent() {
 
       (
           async () => {
-              const res = await axios.get("http://localhost:5111/post/International");
+              const res = await axios.get("https://newsportal-1.onrender.com/post/International");
               setPost(res.data);
           }
       )()

@@ -10,7 +10,7 @@ export default function Business() {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:5111/post/Business");
+      const res = await axios.get("https://newsportal-1.onrender.com/post/Business");
       console.log(res.data);
       setPosts(res.data);
     })();

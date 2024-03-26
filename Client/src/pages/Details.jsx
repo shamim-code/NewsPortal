@@ -11,7 +11,7 @@ export default function Details() {
     useEffect(()=> {
         (
             async()=> {
-                const res = await axios.get(`http://localhost:5111/details/${params.postTitle}`);
+                const res = await axios.get(`https://newsportal-1.onrender.com/details/${params.postTitle}`);
                 setPost(res.data);
             }
         )()

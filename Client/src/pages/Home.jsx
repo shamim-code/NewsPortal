@@ -10,7 +10,7 @@ import Loader from "../components/Loader";
 export default function Home() {
   //http://localhost:5111/latest
 
-  const baseUrl = "http://localhost:5111/latest";
+  const baseUrl = "https://newsportal-1.onrender.com/latest";
   const [posts, setPosts] = useState([]);
 
   const navigation = useNavigate();

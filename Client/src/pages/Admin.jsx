@@ -13,7 +13,7 @@ export default function Admin() {
             image: "",
         },
         onSubmit: async(values)=> {
-            const res = await axios.post("http://localhost:5111/post/create", values);
+            const res = await axios.post("https://newsportal-1.onrender.com/post/create", values);
 
             if(res.data.postStatus=="success"){
                 Swal.fire({

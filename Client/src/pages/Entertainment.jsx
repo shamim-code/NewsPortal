@@ -12,7 +12,7 @@ export default function Entertainment() {
 
   useEffect(() => {
     (async () => {
-      const res = await axios.get("http://localhost:5111/post/Entertainment");
+      const res = await axios.get("https://newsportal-1.onrender.com/post/Entertainment");
 
       setPosts(res.data);
     })();
