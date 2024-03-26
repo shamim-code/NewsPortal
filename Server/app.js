@@ -10,7 +10,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
-app.use("/", postRoutes);
+app.use(postRoutes);
+
+app.get("/", (req, res) => {
+    res.send("Hello, world!");
+})
 
 app.get("*",(req, res) => {
     res.send("This is default page");
